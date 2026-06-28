@@ -1,15 +1,9 @@
 # AWS CI/CD pipeline
 
-Flask demo app with Terraform for AWS EC2 and a deploy script. Built to practice the full loop: containerize, provision infra, run on the instance.
+Flask hello-world, Dockerfile, Terraform for one EC2 in ap-south-1. Did this to get the plumbing right — image build, instance boot, container via user_data.
 
-## What's here
+- `app/` — flask + dockerfile
+- `terraform/` — EC2, user_data points at deploy script
+- `Scripts/deploy.sh` — runs on the box
 
-| Path | What it is |
-|------|------------|
-| `app/` | Flask app and Dockerfile |
-| `terraform/` | EC2 provisioning (Amazon Linux, user_data bootstrap) |
-| `Scripts/` | Deploy script run on the instance |
-
-Stack: Docker, Terraform, AWS EC2, Flask.
-
-**Mamoon Idrees** · [LinkedIn](https://www.linkedin.com/in/mamoon-idrees) · mamoon.idrees5@gmail.com
+No GitHub Actions yaml in here anymore (was on another branch / lost in a cleanup). The terraform + docker bits still work if you want to run it manually.
