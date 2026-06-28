@@ -1,23 +1,15 @@
-# DevOps CI/CD Pipeline Project
+# AWS CI/CD pipeline
 
-This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker, Terraform, and AWS EC2.
+Flask demo app with Terraform for AWS EC2 and a deploy script. Built to practice the full loop: containerize, provision infra, run on the instance.
 
-## 🔧 Technologies Used
-- GitHub Actions
-- Docker
-- Terraform
-- AWS EC2, S3, CodeDeploy
-- Python (Flask)
+## What's here
 
-## 📁 Project Structure
-```
-.github/workflows     # CI/CD pipeline definitions
-terraform/            # Terraform scripts for AWS provisioning
-app/                  # Flask application and Dockerfile
-scripts/              # Shell script to run on EC2 via user_data
-```
+| Path | What it is |
+|------|------------|
+| `app/` | Flask app and Dockerfile |
+| `terraform/` | EC2 provisioning (Amazon Linux, user_data bootstrap) |
+| `Scripts/` | Deploy script run on the instance |
 
-## 🚀 Workflow
-1. Push to main branch triggers GitHub Actions.
-2. Docker image is built and pushed to DockerHub.
-3. Terraform provisions AWS EC2 and deploys Docker container.
+Stack: Docker, Terraform, AWS EC2, Flask.
+
+**Mamoon Idrees** · [LinkedIn](https://www.linkedin.com/in/mamoon-idrees) · mamoon.idrees5@gmail.com
